@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -96,19 +98,35 @@ const ContactUs = () => {
           Send Message
         </button>
       </form>
-
-      {/* Social Links */}
-      <div className={'socialLinks'}>
-        <a href="https://www.linkedin.com/in/ghulam-akber-8221052bb/" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-        <a href="https://github.com/Akber261986" target="_blank" rel="noopener noreferrer">
-        GitHub
-        </a>
-        <a href="https://web.facebook.com/ghulam.dal?mibextid=ZbWKwL&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
-        FaceBook
-        </a>
-      </div>
+      <div className="social">
+          <Link href="https://www.linkedin.com/in/ghulam-akber-8221052bb/" target="_blank" rel="noopener noreferrer"
+          >
+            <Image 
+            src={"/images/svg/linkedin-brands-solid.svg"}
+            alt='LinkedIn'
+            width={50}
+            height={1}
+            />
+          </Link>
+          <Link href="https://github.com/Akber261986" target="_blank" rel="noopener noreferrer"
+          >
+            <Image 
+            src={"/images/svg/github-brands-solid.svg"}
+            alt='GitHub'
+            width={50}
+            height={1}
+            />
+          </Link>
+          <Link href="https://web.facebook.com/ghulam.dal?mibextid=ZbWKwL&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer"
+          >
+            <Image 
+            src={"/images/svg/facebook-brands-solid.svg"}
+            alt='Facebook'
+            width={50}
+            height={1}
+            />
+          </Link>
+        </div>
     </section>
   );
 };

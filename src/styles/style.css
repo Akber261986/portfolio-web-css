@@ -5,12 +5,19 @@
     align-items: center;
     justify-content: space-between;
     background-color: #030712;
-    padding: 5px 100px;
+    padding: 8px 80px;
+    height: 80px;
 }
 
 .navItems {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    background-color: #030712;
+    position: static;
+    height: auto;
+    width: auto;
+    padding-top: 0;
     gap: 20px;
     color: #fff;
 }
@@ -26,6 +33,10 @@
 .logo span {
     color: white;
 }
+.hambtn {
+    display: none;
+}
+
 
 
 /* <<<<<<<<==========Home==========>>>>>>>> */
@@ -114,6 +125,35 @@
 .aboutBtn:hover {
     background-color: #2563eb;
 }
+.skill {
+    width: 100vw;
+    margin: 40px 0;
+    padding: 0 64px;
+}
+.skill h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+.skillCard {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+.skillName {
+    width: 80px;
+}
+.coloredLine {
+    width: 75%;
+}
+.coloredLine div {
+    height: 16px;
+    transition: all;
+    transition-duration: 500ms;
+    transition: ease-out;
+}
 
 
 /* <<<<<<<<=============Career============>>>>>>>>>> */
@@ -192,7 +232,7 @@
   }
 
   .contactForm {
-    width: 600px;
+    width: 640px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -234,20 +274,11 @@
     background-color: #f84690;
   }
   
-  .socialLinks {
+  .social {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  .socialLinks a {
-    margin: 0 1rem;
-    color: #0070f3;
-    text-decoration: none;
-  }
-  
-  .socialLinks a:hover {
-    text-decoration: underline;
+    margin-top: 64px;
+    gap: 64px;
   }
   .msgHide {
     display: none;
@@ -258,15 +289,48 @@
     font-size: 12px;
   }
 
-@media (max-width: 600px){
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #030712;
+    height: 4rem;
+    color: #fff;
+  }
+  .footerpath {
+    width: 2px;
+    height: 2rem;
+    background: #fff;
+  }
+
+@media (max-width: 640px){
     .headerContainer {
-        padding: 5px 25px;
+        padding: 8px 32px;
     }
     .logo {
         font-size: 16px;
     }
     .navItems {
-        gap: 10;
+        gap: 40px;
+        flex-direction: column;
+        padding-top: 40px;
+        position: absolute;
+        right: 0;
+        top : 80px;
+        width: 15rem;
+        height: 25rem;
+    }
+    .showNav {
+        display: flex;
+    }
+    .hideNav {
+        display: none;
+    }
+    .hambtn {
+        display: block;
+        position: absolute;
+        right: 32px;
     }
 
     .homeContainer {
@@ -289,10 +353,10 @@
         display: none;
     }
     .formContainer input, .formContainer textarea {
-        width: 20rem;
+        width: 320px;
     }
     .contactForm {
-        width: 400px
+        width: 412px;
       }
     .formGroup input, .formGroup textarea {
         padding: 0.4rem;   
